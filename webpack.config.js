@@ -1,15 +1,21 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
-const webpack = require('webpack'); //to access built-in plugins
-const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // installed via npm
 
 module.exports = {
   mode: 'development',
   entry: './src/pages/index.js',
   plugins: [
-    new HtmlWebpackPlugin({template: './src/pages/index.html'})
+    new HtmlWebpackPlugin({ template: './src/pages/index.html' })
   ],
   devtool: 'source-map',
   devServer: {
     contentBase: './dist'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
 };

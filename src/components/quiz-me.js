@@ -11,7 +11,7 @@ class QuizMe {
     this.quizContainer.data('isCorrect', false);
 
     // append question in DOM
-    $('<div>' + this.question + '</div>').appendTo(this.quizContainer);
+    $('<div class="quiz-question">' + this.question + '</div>').appendTo(this.quizContainer);
 
     // append elements
     this.quizInput = $('<input />').appendTo(this.quizContainer);

@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import '../styles/index.css';
 import QuizMe from '../components/quiz-me';
 
 class Index {
@@ -27,6 +28,7 @@ class Index {
   }
 
   render() {
+    // render quiz component
     this.quizContainers.each((_, element) => new QuizMe(element));
   }
 }
