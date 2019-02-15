@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-class Quiz {
+class QuizMe {
   constructor(root) {
     // Select HTML nodes
     this.quizContainer = $(root);
@@ -9,12 +9,15 @@ class Quiz {
 
     // set default isCorrect invalid
     this.quizContainer.data('isCorrect', false);
-    
+
+    // append question in DOM
+    $('<div>' + this.question + '</div>').appendTo(this.quizContainer);
+
     // append elements
     this.quizInput = $('<input />').appendTo(this.quizContainer);
     this.quizMessage = $('<div></div>').appendTo(this.quizContainer);
 
-    // events
+    // bind events
     this.quizInput.on('change', this._handleAnswerChange.bind(this))
   }
 
@@ -29,7 +32,7 @@ class Quiz {
   }
 
   isAnswerCorrect(answerInput) {
-    const answerLower = answerInput.toLowerCase();    
+    const answerLower = answerInput.toLowerCase();
     return answerLower === this.correctAnswer.toLowerCase();
   }
 
@@ -40,10 +43,6 @@ class Quiz {
 
     this.isAnswerCorrect(answerInput) ? this.setCorrectAnswer() : this.setWrongAnswer();
   }
-
-  render() {
-    // The transform property controls the position of the slider    
-  }
 }
 
-export default Quiz
+export default QuizMe
