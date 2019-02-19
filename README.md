@@ -1,4 +1,4 @@
-# iClinic Challenge
+# iClinic Challenge Front-end
 Refactor challenge
 
 ### Prerequisites
