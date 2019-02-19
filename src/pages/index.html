@@ -6,19 +6,22 @@
     </head>
     <body id="root">
         <div class="quiz-body">
-            <h1>Você conhece mesmo a saga Harry Potter?</h1>
-            <p>Este teste foi criado para você!</p>
+            <form id="quiz-form">
+                <h1>Você conhece mesmo a saga Harry Potter?</h1>
+                <em>Este teste foi criado para você!</em>
 
-            <div class="quiz-container" data-question="Quantos filmes a série Harry Potter tem?" data-answer="7"></div>
-            <div class="quiz-container" data-question="Nome do ator que atua como Harry Potter?" data-answer="Daniel Radcliffe"></div>
-            <div class="quiz-container" data-question="Harry Potter tinha um animal de estimação? Se sim, qual animal era e qual era o nome desse animal?" data-answer="Edwiges"></div>
-            <div class="quiz-container" data-question="Como são chamados as pessoas que não são bruxos?" data-answer="Trouxas"></div>
-            <div class="quiz-container" data-question="Nome da namorada de Harry Potter?" data-answer="Gina Weasley"></div>
+                <div class="quiz-container" data-question="Quantos filmes a série Harry Potter tem?" data-answer="7"></div>
+                <div class="quiz-container" data-question="Nome do ator que atua como Harry Potter?" data-answer="Daniel Radcliffe"></div>
+                <div class="quiz-container" data-question="Harry Potter tinha um animal de estimação? Se sim, qual animal era e qual era o nome desse animal?" data-answer="Edwiges"></div>
+                <div class="quiz-container" data-question="Como são chamados as pessoas que não são bruxos?" data-answer="Trouxas"></div>
+                <div class="quiz-container" data-question="Nome da namorada de Harry Potter?" data-answer="Gina Weasley"></div>
 
-            <div class="quiz-footer">
-                <button class="check-results">Ver resultados</button>
-                <div class="correct-answers-message"></div>
-            </div>
+                <div class="quiz-footer">
+                    <button id="check-results" class="primary" type="submit">Ver resultados</button>
+                    <button id="play-again" class="secondary">Jogar novamente</button>
+                    <div class="correct-answers-message"></div>
+                </div>
+            </form>
         </div>
     </body>
 </html>

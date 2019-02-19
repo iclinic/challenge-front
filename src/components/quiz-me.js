@@ -15,20 +15,14 @@ class QuizMe {
 
     // append elements
     this.quizInput = $('<input />').appendTo(this.quizContainer);
-    this.quizMessage = $('<div></div>').appendTo(this.quizContainer);
+    $('<div class="quiz-message" style="display: none">' + this.correctAnswer + '</div>').appendTo(this.quizContainer);
 
     // bind events
     this.quizInput.on('change', this._handleAnswerChange.bind(this))
   }
 
-  setCorrectAnswer() {
-    this.quizMessage.text('All right!');
-    this.quizContainer.data('isCorrect', true);
-  }
-
-  setWrongAnswer() {
-    this.quizMessage.text('Wrong :(');
-    this.quizContainer.data('isCorrect', false);
+  markAnswerResult(isCorrect) {
+    this.quizContainer.data('isCorrect', isCorrect);
   }
 
   isAnswerCorrect(answerInput) {
@@ -40,8 +34,9 @@ class QuizMe {
     event.preventDefault();
 
     const answerInput = $(event.target).val();
+    const isAnswerCorrect = this.isAnswerCorrect(answerInput);
 
-    this.isAnswerCorrect(answerInput) ? this.setCorrectAnswer() : this.setWrongAnswer();
+    this.markAnswerResult(isAnswerCorrect)
   }
 }
 

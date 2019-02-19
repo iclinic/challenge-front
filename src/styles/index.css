@@ -3,6 +3,10 @@ body {
     padding: 0;
 }
 
+.quiz-container {
+    margin-bottom: 14px;
+}
+
 .quiz-body {
     width: 35em;
     margin: 5em auto;
@@ -18,6 +22,19 @@ body {
     align-items: center;
 }
 
+.quiz-hidden {
+    display: none;
+}
+
+.quiz-message {
+    color: red;
+    font-size: .8em;
+    margin-top: 3px;
+}
+.quiz-message:before {
+    content: 'Resposta: '
+}
+
 .correct-answers-message {
     margin-left: auto;
     font-size: 16px;
@@ -26,30 +43,56 @@ body {
 input {
     width: 100%;
     font-size: 14px;
-    margin-bottom: 14px;
     padding: 6px;
     border: solid 1px #ccc;
     outline: none;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+em {
+    display: block;
+    color: #666;
+    margin-bottom: 30px;
 }
 
 button {
     font-size: 18px;
     line-height: 30px;
     padding: 6px 14px;
-    background-image: linear-gradient(to bottom, #2bbe6a,#27ae60);
-    border-color: #208c4e !important;
-    box-shadow: inset 0 1px 0 0 #2cc26c, 0 1px 0 0 rgba(22,29,37,0.05), 0 0 0 0 transparent;
-    color: #fff;
-    background-color: #29B665;
+    border-color: #dae1e7;
+    box-shadow: inset 0 1px 0 0 white, 0 1px 0 0 rgba(22, 29, 37, 0.05), 0 0 0 0 transparent;
+    background: linear-gradient(to bottom, white, #f3f5f7);
+    color: #212b36;
     border-radius: 3px;
     outline: none;
     cursor: pointer;
+    border-width: 1px;
+}
+
+button:hover, button:focus {
+    border-color: #dae1e7;
+    background: linear-gradient(to bottom, #f9fafb, #eaedf1);
+}
+
+button.primary {
+    color: #fff;
+    border-color: #1e8449;
+    box-shadow: inset 0 1px 0 0 #2aba67, 0 1px 0 0 rgba(22, 29, 37, 0.05), 0 0 0 0 transparent;
+    background: linear-gradient(to bottom, #29b665, #25a65b);
+}
+
+button.primary:hover, button.primary:focus {
+    border-color: #1e8449;
+    background: linear-gradient(to bottom, #27ae60, #229955);
 }
 
 @media (max-width: 500px) {
     .quiz-body {
         margin-top: 10px;
-        width: 100%;
+        width: 90%;
         padding: 20px;
     }
     input {
