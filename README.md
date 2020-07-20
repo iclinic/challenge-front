@@ -7,8 +7,8 @@ Yes, it is another Star Wars challenge.
 Your mission is simple:
 You must consume the SWAPI (A famous Star Wars API).
 Should call two endpoints at the SAME TIME:
-- `https://swapi.dev/api/1`  -> Get info from the light side of force, the master is Luke Skywalker.
-- `https://swapi.dev/api/4`  -> Get info from the dark side of force, the master is Darth Vader.
+- `https://swapi.dev/api/people/1`  -> Get info from the light side of force, the master is Luke Skywalker.
+- `https://swapi.dev/api/people/4`  -> Get info from the dark side of force, the master is Darth Vader.
 
 Based on service response time, and your "force alignment", the first master returned should be display on screen, with its **centered image**, **name** and a **corresponding background color** (black for the dark side and yellow for the light side).
 
