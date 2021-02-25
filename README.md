@@ -31,7 +31,7 @@ Sua UI deve funcionar da seguinte forma:
 - Na versão mobile, atente-se pelo fato de ser responsiva para larguras de tela menores que `800px`.
 Repare também que foi alterada a ordem de apresentação do **nome do mestre**, **botão para chamar novamente a força** e **imagem**.
 
-- Seria MUITO bom que tivessem testes unitários ou de integração da sua aplicação.
+- Testes são essenciais, foque em garantir a experiência do usuário com testes que façam sentido.
 
 ### Desktop
 
