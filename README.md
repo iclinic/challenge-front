@@ -55,4 +55,9 @@ Repare também que foi alterada a ordem de apresentação do **nome do mestre**,
 O código fonte deve ser hospedado em algum repositório Git aberto para que possamos visualizá-lo, recomendamos o Github.
 Para avaliarmos a implementação em funcionamento, sugerimos o Github pages, Netlify, now.sh, AWS Amplify, etc.
 
+## O que vamos avaliar? (importante)
+
+Vamos avaliar conhecimentos em React, implementação e qualidade dos testes, legibilidade e organização do código (clean code), atenção aos detalhes (pixel perfect), uso eficiente de gerenciamento de estado e da linguagem Javascript, qualidade da implementação dos estilos, capacidade de compreender o contexto do desafio e de propor soluções eficientes.
+
+
 Boa sorte! Que a força esteja com você.
